@@ -1,7 +1,7 @@
 oe-functies-herhaling-start
 Toepassing op programmeerstructuren en functies
 # Doelstelling
-In deze oefeningen worden een aantal oefeningen op lussen in een dynamische lay-out toegepast.
+In deze oefening worden een aantal oefeningen op lussen in een dynamische lay-out toegepast.
 Naargelang de oefening worden er 1 of 2 textboxen getoond en wordt de code die uitgevoerd wordt bij een klik op btnVoerUit gewijzigd.
 Gebruik functions waar mogelijk om je code overzichtelijk en compact te houden
 # Screenshots
@@ -15,6 +15,10 @@ Gebruik functions waar mogelijk om je code overzichtelijk en compact te houden
 
 ![Screenshot tafels](/img/Tafels.png)
 # Functionaliteiten
+## Opstarten
+Voeg code toe aan 
+- KoppelDomElementen: koppel alle DOM-elementen. Gebruik hiervoor de reeds gedeclareerde variabelen.
+- VerbergElementen: Alle controls onder hdrFunctionaliteit worden verborgen.
 ## Aanpassing lay-out bij muisbeweging
 - Alle controls onder hdrFunctionaliteit worden verborgen.
 - De input van de textboxen wordt gewist
