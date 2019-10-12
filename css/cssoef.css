@@ -1,0 +1,33 @@
+
+body{
+  line-height: 2em;
+}
+
+label {
+ display: inline-block;
+ width: 150px;
+}
+
+.feedback {
+  margin-top:10px;
+  padding: 10px;
+}
+
+#divFunctionaliteit {
+  padding-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.tafel{
+  background-color: aquamarine;
+  border : 1px solid black;
+  padding : 10px;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.even {
+  background-color: gainsboro;
+}
+
+
