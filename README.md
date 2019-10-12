@@ -5,15 +5,15 @@ In deze oefeningen worden een aantal oefeningen op lussen in een dynamische lay-
 Naargelang de oefening worden er 1 of 2 textboxen getoond en wordt de code die uitgevoerd wordt bij een klik op btnVoerUit gewijzigd.
 Gebruik functions waar mogelijk om je code overzichtelijk en compact te houden
 # Screenshots
-![Screenshot winst]('/img/Winst1.png')
+![Screenshot winst](/img/Winst1.png)
 
-![Screenshot verlies]('/img/Winst2.png')
+![Screenshot verlies](/img/Winst2.png)
 
-![Screenshot dieren]('/img/Dieren.png')
+![Screenshot dieren](/img/Dieren.png)
 
-![Screenshot 1 tafel]('/img/Tafel1.png')
+![Screenshot 1 tafel](/img/Tafel1.png)
 
-![Screenshot tafels]('/img/Tafels.png')
+![Screenshot tafels](/img/Tafels.png)
 # Functionaliteiten
 ## Aanpassing lay-out bij muisbeweging
 - Alle controls onder hdrFunctionaliteit worden verborgen.
