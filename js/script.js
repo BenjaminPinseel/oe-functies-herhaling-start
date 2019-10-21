@@ -18,7 +18,7 @@ const tafelVanTot='Toon de tafels van ... tot ...';
 function Initialiseer() {
       KoppelDomElementen();
       VoegEventHandlersToe();
-      VerbergElementen();
+      VerbergElementen(`Omschrijving Functionaliteit`);
 }
 
 function KoppelDomElementen() {
@@ -42,20 +42,19 @@ function KoppelDomElementen() {
 }
 
 function VoegEventHandlersToe() {
-      btnWinstVerlies.addEventListener(`mouseenter`,function(){ToonFunctionaliteit(winstOfVerlies)});
-      btnDieren.addEventListener(`mouseenter`,function(){ToonFunctionaliteit(dieren)});
-      btnTafel.addEventListener(`mouseenter`,function(){ToonFunctionaliteit(tafel)});
-      btnTafels.addEventListener(`mouseenter`,function(){ToonFunctionaliteit(tafelVanTot)});
+      btnWinstVerlies.addEventListener(`mouseenter`,function(){VerbergElementen(winstOfVerlies)});
+      btnDieren.addEventListener(`mouseenter`,function(){VerbergElementen(dieren)});
+      btnTafel.addEventListener(`mouseenter`,function(){VerbergElementen(tafel)});
+      btnTafels.addEventListener(`mouseenter`,function(){VerbergElementen(tafelVanTot)});
 
-      btnWinstVerlies.addEventListener(`click`,);
-      btnDieren.addEventListener(`click`,);
-      btnTafel.addEventListener(`click`,);
-      btnTafels.addEventListener(`click`,);
+      btnWinstVerlies.addEventListener(`click`,function(){ToonFunctionaliteit(winstOfVerlies)});
+      btnDieren.addEventListener(`click`,function(){ToonFunctionaliteit(dieren)});
+      btnTafel.addEventListener(`click`,function(){ToonFunctionaliteit(tafel)});
+      btnTafels.addEventListener(`click`,function(){ToonFunctionaliteit(tafelVanTot)});
 
 }
 
-function VerbergElementen() {
-      hdrFunctionaliteit.style.visibility = `hidden`;
+function VerbergElementen(titel) {
       lblOmschrijving1.style.visibility = `hidden`;
       lblOmschrijving2.style.visibility = `hidden`;
       txtInput1.style.visibility = `hidden`;
@@ -63,42 +62,51 @@ function VerbergElementen() {
       btnVoerUit.style.visibility = `hidden`;
       divFeedBack.style.visibility = `hidden`;
 
-
-}
-
-function ToonFunctionaliteit(titel) {
-      hdrFunctionaliteit.style.visibility = `visible`;
-
       txtInput1.value = ``;
       txtInput2.value = ``;
       divFeedBack.innerHTML = ``;
       hdrFunctionaliteit.innerHTML = titel;
 
+
+}
+
+function ToonFunctionaliteit(titel) {
+
       switch(titel){
             case winstOfVerlies:
                   lblOmschrijving1.innerHTML = `Aankoopprijs`;
                   lblOmschrijving1.style.visibility = `visible`;
+                  txtInput1.style.visibility = `visible`
+                  txtInput1.value = `1`;
                   lblOmschrijving2.innerHTML = `Verkoopprijs`;
                   lblOmschrijving2.style.visibility = `visible`;
                   txtInput2.style.visibility = `visible`
+                  txtInput2.value = `1`;
                   break;
             case dieren:
                   lblOmschrijving1.innerHTML = `Aantal huisdieren`;
                   lblOmschrijving1.style.visibility = `visible`;
+                  txtInput1.style.visibility = `visible`
+                  txtInput1.value = `1`;
                   lblOmschrijving2.style.visibility = `hidden`;
                   txtInput2.style.visibility = `hidden`;
                   break;
             case tafel:
                   lblOmschrijving1.innerHTML = `Tafel van`
                   lblOmschrijving1.style.visibility = `visible`;
+                  txtInput1.style.visibility = `visible`
+                  txtInput1.value = `1`;
                   lblOmschrijving2.style.visibility = `hidden`;
                   txtInput2.style.visibility = `hidden`;
                   break;
             case tafelVanTot:
                   lblOmschrijving1.innerHTML = `Tafel van`;
                   lblOmschrijving1.style.visibility = `visible`;
+                  txtInput1.style.visibility = `visible`
+                  txtInput1.value = `1`;
                   lblOmschrijving2.innerHTML = `tot`;
                   txtInput2.style.visibility = `visible`
+                  txtInput2.value = `1`;
                   lblOmschrijving2.style.visibility = `visible`;
                   break;
       }
