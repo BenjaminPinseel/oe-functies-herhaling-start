@@ -19,6 +19,7 @@ function Initialiseer() {
       KoppelDomElementen();
       VoegEventHandlersToe();
       VerbergElementen(`Omschrijving Functionaliteit`);
+      txtInput2.value = 0;
 }
 
 function KoppelDomElementen() {
@@ -52,6 +53,8 @@ function VoegEventHandlersToe() {
       btnTafel.addEventListener(`click`,function(){ToonFunctionaliteit(tafel)});
       btnTafels.addEventListener(`click`,function(){ToonFunctionaliteit(tafelVanTot)});
 
+      btnVoerUit.addEventListener(`click`,VoerUit);
+
 }
 
 function VerbergElementen(titel) {
@@ -81,7 +84,7 @@ function ToonFunctionaliteit(titel) {
                   lblOmschrijving2.innerHTML = `Verkoopprijs`;
                   lblOmschrijving2.style.visibility = `visible`;
                   txtInput2.style.visibility = `visible`
-                  txtInput2.value = `1`;
+                  txtInput2.value = `3`;
                   break;
             case dieren:
                   lblOmschrijving1.innerHTML = `Aantal huisdieren`;
@@ -106,16 +109,31 @@ function ToonFunctionaliteit(titel) {
                   txtInput1.value = `1`;
                   lblOmschrijving2.innerHTML = `tot`;
                   txtInput2.style.visibility = `visible`
-                  txtInput2.value = `1`;
+                  txtInput2.value = `3`;
                   lblOmschrijving2.style.visibility = `visible`;
                   break;
       }
+      btnVoerUit.style.visibility = `visible`
 
 
    
 }
 
-function GeefBedrijfsResultaat() {
+function GeefBedrijfsResultaat(waarde1, waarde2) {
+      let resultaat,feedbackString;
+      resultaat = waarde2 - waarde1;
+
+      if(resultaat > 0){
+            feedbackString = `De winst bedraagt: ${resultaat}`;
+      }
+      else if(resultaat == 0){
+            feedbackString = `Het resultaat is break-even`;
+      }
+      else if(resultaat < 0){
+            feedbackString = `Het verlies bedraagt: ${resultaat}`;
+      }
+      divFeedBack.style.visibility = `visible`;
+      divFeedBack.innerHTML = feedbackString;
 
 }
 
@@ -132,6 +150,29 @@ function GeefTafelVan() {
 }
 
 function VoerUit() {
+      let waarde1, waarde2, resultaat;
+      let nummerControle = false;
+
+      waarde1 = parseInt(txtInput1.value) ;
+      waarde2 = parseInt(txtInput2.value);
+
+      if(txtInput2.style.visibility == `hidden`){
+            if(!isNaN(waarde1)){
+                  nummerControle = true;
+            }
+      }
+      else{
+            if(!isNaN(waarde1) && !isNaN(waarde2)){
+                  nummerControle = true;
+            }
+      }
+      if(nummerControle == false){
+            divFeedBack.style.visibility = `visible`;
+            divFeedBack.innerHTML = `De input moet numeriek zijn`;
+      }
+      else{
+            GeefBedrijfsResultaat(waarde1,waarde2);
+      }
 
 }
 
